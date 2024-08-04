@@ -1,0 +1,231 @@
+.signup {
+  > .container {
+    max-height: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    section {
+      padding: 109px;
+
+      &:first-of-type {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        position: relative;
+        left: 121px;
+        h1 {
+          font: 400 40px Poor Richard;
+          color: #4285f3;
+          width: 109px;
+          height: 45px;
+          line-height: 45.04px;
+        }
+        aside {
+          width: 429px;
+          height: 115px;
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+          // border: 1px solid black;
+
+          h3 {
+            font: 600 30px $Text_1;
+            line-height: 24px;
+            color: #152a16;
+          }
+          p {
+            margin-top: 6px;
+            font: 400 16px $Text_1;
+            line-height: 28px;
+            color: #5c635a;
+            width: 480px;
+          }
+          > span {
+            font: 400 16px $Text_1;
+            line-height: 28px;
+            color: #4285f3;
+            cursor: pointer;
+          }
+        }
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          // justify-content: center;
+          // align-items: center;
+          // position: relative;
+          // top: 339px;
+          // left: 121px;
+
+          > div {
+            width: 428px;
+            height: 84px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            label {
+              color: #152a16;
+              font: 500 16px $Text_1;
+              width: 150px;
+              height: 14px;
+              line-height: 14px;
+            }
+            input {
+              padding: 0px 10px;
+              width: 428px;
+              height: 54px;
+              border-radius: 10px;
+              border: 0.7px solid #e7e7e7;
+              font: 400 15px $Text_1;
+              color: #5c635a;
+            }
+          }
+          .check {
+            width: 206px;
+            height: 16px;
+            line-height: 14px;
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            gap: 4px;
+            // border: 2px solid black;
+
+            // position: relative;
+            // top: 763px;
+            //  left: 121px;
+            > input {
+              width: 17px;
+              height: 16px;
+              border-radius: 4px;
+              border: 1px solid #5c635a;
+              cursor: pointer;
+            }
+            > span {
+              font: 400 14px $Text_1;
+              letter-spacing: 2%;
+              color: #4285f3;
+              > a {
+                text-decoration: none;
+              }
+            }
+          }
+        }
+
+        .btnP {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 12px;
+          // border: 2px solid black;
+          width: 428px;
+          > button {
+            width: 271px;
+            height: 54px;
+            border-radius: 10px;
+            padding: 16px;
+            background-color: #4285f3;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            &:hover {
+              background-color: #156bca;
+            }
+          }
+
+          > p {
+            width: 263px;
+            height: 24px;
+            font: 400 16px $Text_1;
+
+            > a {
+              color: #156bca;
+            }
+          }
+        }
+      }
+      &:last-of-type {
+        // position: relative;
+
+        main {
+          width: 648px;
+          height: 802px;
+          position: relative;
+          // border: 2px solid red;
+
+          > img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+            border-radius: 16px;
+          }
+
+          aside {
+            position: absolute;
+            width: 341px;
+            height: 143px;
+            top: 332px;
+            left: 153px;
+            border-radius: 10px;
+            background-color: #152a16;
+            opacity: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            > article {
+              width: 271px;
+              height: 83px;
+              // border: 2px solid red;
+              text-align: center;
+              > a {
+                font: 600 22px $Text_1;
+                line-height: 35px;
+                text-align: center;
+                color: #156bca;
+                &:hover {
+                  color: #1777dd;
+                  opacity: 100%;
+                }
+              }
+              > p {
+                font: 500 22px $Text_1;
+                line-height: 35px;
+                text-align: center;
+                color: #ffffff;
+              }
+            }
+          }
+          .ellipse {
+            position: absolute;
+            // border: 2px solid black;
+            display: flex;
+            bottom: 35px;
+            left: 50%;
+            gap: 8px;
+
+            > div {
+              cursor: pointer;
+              width: 10px;
+              height: 10px;
+              background-color: #3b463373;
+              opacity: 45%;
+              border-radius: 50%;
+              transition: all 0.3s;
+              &:first-child {
+                background-color: #156bca;
+                opacity: 100%;
+              }
+              &:hover {
+                background-color: #156bca;
+                opacity: 100%;
+                transform: scale(1.1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

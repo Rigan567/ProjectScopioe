@@ -1,0 +1,305 @@
+.login {
+  .loginContainer {
+    max-height: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    > section {
+      padding: 109px;
+      &:first-of-type {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        position: relative;
+        left: 121px;
+        h1 {
+          font: 400 40px Poor Richard;
+          color: #4285f3;
+          width: 109px;
+          height: 45px;
+          line-height: 45.04px;
+        }
+        aside {
+          width: 429px;
+          height: 115px;
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+          h3 {
+            font: 600 30px $Text_1;
+            line-height: 24px;
+            color: #152a16;
+          }
+          p {
+            margin-top: 6px;
+            font: 400 16px $Text_1;
+            line-height: 28px;
+            color: #5c635a;
+            width: 480px;
+          }
+        }
+        .socialSites {
+          width: 432px;
+          height: 108px;
+          > .btns {
+            width: 431px;
+            height: 55px;
+            display: flex;
+            justify-content: space-between;
+            > button {
+              border: none;
+              filter: drop-shadow(1px 4px 3px rgba(0, 0, 0, 0.253));
+              cursor: pointer;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 13px;
+              transition: all 0.3s;
+              &:first-of-type {
+                width: 177.6px;
+                height: 55px;
+                border-radius: 6px;
+                font: 400 16px $Text_1;
+                color: #152a16;
+                background: linear-gradient(90deg, #e4e4e4, #ffffff);
+                &:hover {
+                  transform: scale(1.05);
+                }
+                > svg {
+                  width: 21.93px;
+                  height: 22.44px;
+                }
+              }
+              &:last-of-type {
+                width: 205px;
+                height: 54px;
+                border-radius: 10px;
+                font: 400 16px $Text_2;
+                background: linear-gradient(90deg, #298fff, #0778f5);
+                color: #ffffff;
+                &:hover {
+                  transform: scale(1.05);
+                }
+                > svg {
+                  width: 24.5px;
+                  height: 23.5px;
+                }
+              }
+            }
+          }
+          .contEmail {
+            margin-top: 25px;
+            width: 431px;
+            height: 21px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            // border: 2px solid black;
+            > div {
+              width: 125px;
+              height: 2px;
+              background-color: #e7e7e7;
+            }
+            .emailLink {
+              // border: 2px solid black;
+              text-align: center;
+              width: 159px;
+              height: 21px;
+              background-color: transparent;
+              p {
+                font: 400 12px $Text_1;
+                color: #5c635a;
+              }
+            }
+          }
+        }
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          > div {
+            width: 428px;
+            height: 84px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            label {
+              color: #152a16;
+              font: 500 16px $Text_1;
+              width: 150px;
+              height: 14px;
+              line-height: 14px;
+            }
+            input {
+              padding: 0px 10px;
+              width: 428px;
+              height: 54px;
+              border-radius: 10px;
+              border: 0.7px solid #e7e7e7;
+              font: 400 15px $Text_1;
+              color: #5c635a;
+            }
+          }
+          .remforPass {
+            // border: 2px solid black;
+            width: 428px;
+            height: 16px;
+            display: flex;
+            flex-direction: row;
+            // justify-content: space-between;
+            .rememberPass {
+              // border: 2px solid black;
+              width: 206px;
+              height: 16px;
+              line-height: 14px;
+              margin-bottom: 10px;
+              display: flex;
+              flex-direction: row;
+              justify-content: start;
+              gap: 4px;
+
+              > input {
+                width: 17px;
+                height: 16px;
+                border-radius: 4px;
+                border: 1px solid #5c635a;
+                cursor: pointer;
+              }
+              > span {
+                font: 400 14px $Text_1;
+                letter-spacing: 2%;
+                color: #4285f3;
+              }
+            }
+            > div {
+              width: 130px;
+              height: 14px;
+              > a {
+                text-decoration: none;
+                font: 500 14px $Text_1;
+                line-height: 14px;
+                letter-spacing: 2%;
+              }
+            }
+          }
+        }
+        .btnP {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 12px;
+          // border: 2px solid black;
+          width: 428px;
+          > button {
+            width: 271px;
+            height: 54px;
+            border-radius: 10px;
+            padding: 16px;
+            background-color: #4285f3;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            &:hover {
+              background-color: #156bca;
+            }
+          }
+
+          > p {
+            width: 313px;
+            height: 14px;
+            font: 400 15px $Text_1;
+            letter-spacing: 2%;
+
+            > a {
+              color: #156bca;
+            }
+          }
+        }
+      }
+
+      &:last-of-type {
+        main {
+          width: 648px;
+          height: 802px;
+          position: relative;
+          // border: 2px solid red;
+
+          > img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+            border-radius: 16px;
+          }
+
+          aside {
+            position: absolute;
+            width: 341px;
+            height: 143px;
+            top: 332px;
+            left: 153px;
+            border-radius: 10px;
+            background-color: #152a16;
+            opacity: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            > article {
+              width: 271px;
+              height: 83px;
+              // border: 2px solid red;
+              text-align: center;
+
+              > p {
+                font: 500 22px $Text_1;
+                line-height: 35px;
+                text-align: center;
+                color: #ffffff;
+                > a {
+                  font: 600 22px $Text_1;
+                  line-height: 35px;
+                  text-align: center;
+                  color: #156bca;
+                  &:hover {
+                    color: #1777dd;
+                    opacity: 100%;
+                  }
+                }
+              }
+            }
+          }
+          .ellipse {
+            position: absolute;
+            // border: 2px solid black;
+            display: flex;
+            bottom: 35px;
+            left: 50%;
+            gap: 8px;
+
+            > div {
+              cursor: pointer;
+              width: 10px;
+              height: 10px;
+              background-color: #3b463373;
+              opacity: 45%;
+              border-radius: 50%;
+              transition: all 0.3s;
+              &:nth-child(2) {
+                background-color: #156bca;
+                opacity: 100%;
+              }
+              &:hover {
+                background-color: #156bca;
+                opacity: 100%;
+                transform: scale(1.1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  // border: 2px solid black;
+  height: 100%;
+  > .logo {
+    // border: 2px solid black;
+    width: 100%;
+    height: 140px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > h1 {
+      font: 400 40px Poor Richard;
+      line-height: 45.04px;
+      color: #4285f3;
+    }
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    // border: 2px solid yellow;
+    margin-top: 0%;
+    > a {
+      // border: 2px solid black;
+      text-align: center;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      // width: 249px;
+      height: 46px;
+      text-decoration: none;
+      font: 500 15px $Text_1;
+      letter-spacing: 2%;
+      line-height: 22.5px;
+      padding-left: 45px;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: #979b961e;
+        transform: scale(1.1);
+      }
+
+      > img {
+        width: 18px;
+        height: 18px;
+        margin-right: 8px;
+      }
+
+      &:first-of-type {
+        background-color: #d4e9ff;
+      }
+    }
+  }
+}
