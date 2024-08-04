@@ -4,12 +4,15 @@ import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "../firebase";
 import img from "../images/1st.png";
 import { toast } from "react-toastify";
+import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 
 const Signup = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const navigate = useNavigate();
 
   const handleSignup = async (e) => {
@@ -32,6 +35,14 @@ const Signup = () => {
       toast.error("Error signing up: " + error.message);
       console.error("Error signing up: ", error);
     }
+  };
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
+  const toggleConfirmPasswordVisibility = () => {
+    setShowConfirmPassword(!showConfirmPassword);
   };
 
   return (
@@ -69,23 +80,36 @@ const Signup = () => {
             </div>
             <div>
               <label htmlFor="password">Password</label>
-              <input
-                type="password"
-                placeholder="Enter your password"
-                name="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
+              <div className="passwordContainer">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Enter your password"
+                  name="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                <div className="eyeIcon" onClick={togglePasswordVisibility}>
+                  {showPassword ? <IoEyeOutline /> : <IoEyeOffOutline />}
+                </div>
+              </div>
             </div>
             <div>
               <label htmlFor="confirmPassword">Confirm Password</label>
-              <input
-                type="password"
-                placeholder="Re-type password"
-                name="confirmPassword"
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-              />
+              <div className="passwordContainer">
+                <input
+                  type={showConfirmPassword ? "text" : "password"}
+                  placeholder="Re-type password"
+                  name="confirmPassword"
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                />
+                <div
+                  className="eyeIcon"
+                  onClick={toggleConfirmPasswordVisibility}
+                >
+                  {showConfirmPassword ? <IoEyeOutline /> : <IoEyeOffOutline />}
+                </div>
+              </div>
             </div>
 
             <div className="check">

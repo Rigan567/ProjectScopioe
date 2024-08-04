@@ -1,0 +1,161 @@
+.navPhone {
+  border-left: 2px solid #eef2f5;
+  border-bottom: 2px solid #eef2f5;
+  transform: translateX(200%);
+  opacity: 0;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: fixed;
+  z-index: 2;
+  background-color: #ffffff;
+
+  box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.37);
+  > article {
+    &:first-of-type {
+      // border: 2px solid black;
+      width: 268px;
+      height: 302px;
+      background-color: #156bca;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+
+      > .usernav {
+        // border: 2px solid yellow;
+        padding-right: 10px;
+        position: relative;
+        bottom: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 191px;
+        height: fit-content;
+        gap: 8px;
+        cursor: pointer;
+        transition: all 0.3s;
+        &:hover .downarr {
+          transform: scale(1.1) translateY(5px);
+        }
+
+        > .userimg {
+          width: 74px;
+          height: 74px;
+
+          > img {
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            cursor: pointer;
+            transition: all 0.3s;
+            &:hover {
+              transform: scale(1.1) rotateZ(360deg);
+            }
+          }
+        }
+        > .userdet {
+          // border: 2px solid red;
+          text-align: end;
+          display: flex;
+          flex-direction: column;
+          gap: 13px;
+          width: 139px;
+          height: 33px;
+          > .p_Arr {
+            display: none;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            transition: all 0.3s;
+
+            p {
+              width: 132px;
+              height: 36px;
+              font: 600 24px $Text_1;
+              color: #ffffff;
+              line-height: 36px;
+            }
+            > .downarr {
+              display: none;
+            }
+          }
+
+          span {
+            // border: 2px solid yellow;
+            text-align: start;
+            width: 110px;
+            height: 8px;
+            font: 400 12px $Text_1;
+            letter-spacing: 2%;
+            line-height: 18px;
+            // padding-right: 20px;
+            position: relative;
+            right: 10px;
+            bottom: 10px;
+          }
+        }
+      }
+    }
+    &:last-of-type {
+      > .navbar {
+        // border: 2px solid red;
+        width: 268px;
+        height: 384px;
+
+        .logo {
+          display: none;
+          // > h1 {
+          //   display: none;
+          // }
+        }
+        main {
+          display: flex;
+          flex-direction: column;
+          // border: 2px solid yellow;
+          margin-top: 10%;
+          > a {
+            // border: 2px solid black;
+            text-align: center;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            // width: 249px;
+            height: 46px;
+            text-decoration: none;
+            font: 500 15px $Text_1;
+            letter-spacing: 2%;
+            line-height: 22.5px;
+            padding-left: 45px;
+            cursor: pointer;
+            transition: all 0.3s;
+
+            &:hover {
+              background-color: #979b961e;
+              transform: scale(1.1);
+            }
+
+            > img {
+              width: 18px;
+              height: 18px;
+              margin-right: 8px;
+            }
+
+            &:first-of-type {
+              background-color: #d4e9ff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.navPhoneComes {
+  transform: translateX(59%) translateY(60px);
+  opacity: 1;
+}

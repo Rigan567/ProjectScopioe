@@ -229,3 +229,18 @@
     }
   }
 }
+.passwordContainer {
+  position: relative;
+  .eyeIcon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    > svg {
+      width: 24px;
+      height: 24px;
+      color: #888f96;
+    }
+  }
+}

@@ -16,13 +16,14 @@ import leftarrow from "../images/left.png";
 import rightarrow from "../images/right.png";
 import tp1 from "../images/testiPerson1.png";
 import tp2 from "../images/testiPerson2.png";
+import navbtn from "../images/navbtn.png";
 import data from "../assets/data.json";
 import Navbar from "./Navbar";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase";
 import { toast } from "react-toastify";
 
-const Home = () => {
+const Home = ({ navOn, setNavON }) => {
   const navigate = useNavigate();
   const user = auth.currentUser;
 
@@ -49,7 +50,7 @@ const Home = () => {
               {user?.photoURL ? (
                 <img src={user.photoURL} alt="User" />
               ) : (
-                <img src={userimg} alt="Default User" /> // replace with your default user image path
+                <img src={userimg} alt="Default User" />
               )}
             </div>
             <div className="userdet">
@@ -63,6 +64,9 @@ const Home = () => {
           <aside>
             <div className="notibell">
               <img src={bell} alt="Notification Bell" />
+            </div>
+            <div className="navbtn">
+              <img src={navbtn} alt="" onClick={() => setNavON(!navOn)} />
             </div>
             <div className="logout">
               <p>Log Out</p>

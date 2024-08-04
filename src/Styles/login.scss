@@ -141,6 +141,21 @@
               font: 400 15px $Text_1;
               color: #5c635a;
             }
+            .passwordContainer {
+              position: relative;
+              .eyeIcon {
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                transform: translateY(-50%);
+                cursor: pointer;
+                > svg {
+                  width: 24px;
+                  height: 24px;
+                  color: #888f96;
+                }
+              }
+            }
           }
           .remforPass {
             // border: 2px solid black;

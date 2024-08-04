@@ -11,12 +11,14 @@ import {
 import { auth, googleProvider, facebookProvider } from "../firebase";
 import img from "../images/1st.png";
 import { toast } from "react-toastify";
+import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
   const navigate = useNavigate();
+  const [showPassword, setShowPassword] = useState(false);
 
   useEffect(() => {
     // Check if user data exists in local storage
@@ -81,6 +83,9 @@ const Login = () => {
       console.error("Error sending password reset email: ", error);
     }
   };
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
 
   return (
     <div className="login">
@@ -123,13 +128,18 @@ const Login = () => {
             </div>
             <div>
               <label htmlFor="password">Password</label>
-              <input
-                type="password"
-                placeholder="Enter your password"
-                name="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
+              <div className="passwordContainer">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Enter your password"
+                  name="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                <div className="eyeIcon" onClick={togglePasswordVisibility}>
+                  {showPassword ? <IoEyeOutline /> : <IoEyeOffOutline />}
+                </div>
+              </div>
             </div>
 
             <div className="remforPass">
