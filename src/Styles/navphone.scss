@@ -66,19 +66,17 @@
           width: 139px;
           height: 33px;
           > .p_Arr {
-            display: none;
-            position: relative;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
             transition: all 0.3s;
 
             p {
-              width: 132px;
+              // border: 2px solid white;
+              width: 150px;
               height: 36px;
               font: 600 24px $Text_1;
               color: #ffffff;
               line-height: 36px;
+              position: relative;
+              right: 10px;
             }
             > .downarr {
               display: none;
@@ -96,7 +94,7 @@
             // padding-right: 20px;
             position: relative;
             right: 10px;
-            bottom: 10px;
+            bottom: 8px;
           }
         }
       }
@@ -156,6 +154,6 @@
 }
 
 .navPhoneComes {
-  transform: translateX(59%) translateY(60px);
+  transform: translateX(57%) translateY(60px);
   opacity: 1;
 }

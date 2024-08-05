@@ -486,7 +486,7 @@
   }
 }
 
-@media screen and (max-width: 432px) {
+@media screen and (max-width: 430px) {
   .home {
     display: grid;
     grid-template-columns: 1fr 5.76fr;
@@ -494,7 +494,7 @@
     // min-width: 440px !important;
 
     section {
-      display: none;
+      // display: none !important;
       &:last-of-type {
         // border: 1px solid black;
         display: flex;
@@ -559,11 +559,9 @@
           }
         }
         .homeContainer {
-          // border: 2px solid red;
-          width: 44.5vmax;
-
           padding: 2px 5px !important;
-          height: 200vmax !important;
+          padding-left: 9px !important;
+          height: 210vh !important;
           // display: flex;
           // flex-direction: column;
           // gap: 20px;
@@ -895,20 +893,23 @@
 
   .login {
     // border: 2px solid black;
-    width: 49vmax !important;
+    width: fit-content !important;
     background-image: url("../images/bg.png") !important;
     background-size: cover !important;
     background-position: center;
     background-repeat: no-repeat;
-    height: 120vh;
+    height: 100vh;
+    padding: 0px 1px;
     // background: transparent;
     .loginContainer {
       transform: translateY(289px);
+      // min-width: 60vmax !important;
       width: 48vmax !important;
       border: 2px solid #ffffff;
       border-radius: 40px 40px 0 0;
-      max-height: 100%;
+      min-height: 100%;
       display: flex !important;
+      justify-content: center !important;
       position: relative;
       background-color: #ffffff;
 
@@ -921,18 +922,25 @@
         &:first-of-type {
           display: flex;
           flex-direction: column;
-          gap: 35px;
+          gap: 50px !important;
           position: relative;
           // left: 121px !important;
           h1 {
             position: absolute;
-            font: 400 40px Poor Richard;
-            color: #4285f3;
-            width: 109px;
-            height: 45px;
-            line-height: 45.04px;
-            top: -25%;
-            left: 38%;
+            font: 400 50px Poor Richard !important;
+            top: -20%;
+            left: 36%;
+            &::after {
+              position: absolute;
+              left: -26%;
+              color: #ffffff;
+              opacity: 96%;
+              // border: 2px solid black;
+              content: "Sign In to view all the massage therapists";
+              width: 197px;
+              height: 54px;
+              font: 600 18px $Text_1;
+            }
           }
           aside {
             width: 429px;
@@ -941,7 +949,7 @@
             flex-direction: column;
             gap: 6px;
             position: relative;
-            top: -5%;
+            top: 0%;
             left: 12%;
             h3 {
               font: 600 30px $Text_1;
@@ -1103,6 +1111,7 @@
             justify-content: center;
             align-items: center;
             gap: 12px;
+            margin-top: 40px;
             // border: 2px solid black;
             width: 428px;
             > button {
@@ -1141,18 +1150,20 @@
   }
 
   .signup {
-    width: 49vmax !important;
+    width: fit-content !important;
     background-image: url("../images/bg.png") !important;
     background-size: cover !important;
     background-position: center;
     background-repeat: no-repeat;
-    height: 120vh !important;
+    height: 100vh !important;
+    padding: 0px 1px;
+
     > .container {
-      transform: translateY(210px);
+      transform: translateY(289px);
       width: 48vmax !important;
       border: 2px solid #ffffff;
       border-radius: 40px 40px 0 0;
-      max-height: 100%;
+      min-height: 100%;
       display: flex !important;
       position: relative;
       background-color: #ffffff;
@@ -1169,8 +1180,20 @@
           position: relative;
           h1 {
             position: absolute;
-            top: -15%;
+            top: -20%;
             left: 38%;
+            &::after {
+              position: absolute;
+              left: -35%;
+              top: 110%;
+              color: #ffffff;
+              opacity: 96%;
+              // border: 2px solid black;
+              content: "Sign In to view all the massage therapists";
+              width: 197px;
+              height: 54px;
+              font: 600 18px $Text_1;
+            }
           }
           aside {
             width: 429px;
